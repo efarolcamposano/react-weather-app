@@ -5,9 +5,12 @@ import Location from './Location';
 
 function TodayForescast({ city }) {
     const [ data, setData ] = useState({ main: {}, weather: {}, wind: {} });
+    const [ isLoading, setIsLoading ] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
+        setIsLoading(true);
+
             const weatherData = await axios(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`);
           
             setData({
@@ -15,6 +18,8 @@ function TodayForescast({ city }) {
                 weather: weatherData.data.weather[0],
                 wind: weatherData.data.wind
             });
+
+        setIsLoading(false);
         };
         
         fetchData();
@@ -23,6 +28,8 @@ function TodayForescast({ city }) {
 
     return (
     <React.Fragment>
+
+        {isLoading ? ( <div className="load-container"><div className="loader"></div></div>) : "" }
 
         <Location city={city} />
         

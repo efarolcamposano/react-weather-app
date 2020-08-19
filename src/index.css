@@ -28,14 +28,18 @@ ul li {
   list-style: none;
 }
 
-.loading {
+.load-container {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
   position: absolute;
-  top: 0;
   left: 0;
-  background: #ffffff;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loader {
@@ -233,6 +237,12 @@ input::placeholder {
     align-items: center;
   }
 
+  .search-box {
+    height: 60px;
+    width: 60px;
+    padding: 15px;
+  }
+
   .open {
     width: 25%;
     background: transparent;
@@ -241,12 +251,6 @@ input::placeholder {
   .top {
     margin: 20px 0 0;
     text-align: left;
-  }
-
-  .search-box {
-    height: 60px;
-    width: 60px;
-    padding: 15px;
   }
 
   .weather-info .wi-data {
