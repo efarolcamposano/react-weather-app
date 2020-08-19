@@ -29,7 +29,7 @@ function TodayForescast({ city }) {
     return (
     <React.Fragment>
 
-        {isLoading ? ( <div className="load-container"><div className="loader"></div></div>) : "" }
+        {isLoading ? ( <div class="loading-container"><div class="loading">Loading...</div></div> ) : "" }
 
         <Location city={city} />
         
