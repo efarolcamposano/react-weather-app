@@ -31,7 +31,12 @@ function App() {
 
   return (
     <div className="app">
-      {isLoading ? ( <div class="loading-container"><div class="loading">Loading...</div></div> ) : "" }
+
+      <div class={ isLoading ? "loading-container" : "loading-container hide" }>
+        <div class="loading"></div>
+        <p>Loading...</p>
+      </div> 
+
       <div className="wrapper d-flex">
 
         <div className="main">
