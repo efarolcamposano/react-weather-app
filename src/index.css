@@ -57,6 +57,7 @@ ul li {
   border-top: 10px solid #fccd02;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+  z-index: 10;
 }
 
 @keyframes spin {
