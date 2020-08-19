@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import api from '../../api/weather';
+import React from 'react';
 import Location from './Location';
 
 function TodayForescast({ main, weather, wind }) {

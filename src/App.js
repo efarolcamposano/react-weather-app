@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import axios from 'axios';
+import api from './api/weather';
 import DailyForecast from './components/daily/Forecast';
 import TodayForecast from './components/today/Forescast';
 import HourForecast from './components/hour/Forecast';
