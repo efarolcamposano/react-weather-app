@@ -1,29 +1,7 @@
 import React from 'react';
 import Location from './Location';
 
-function TodayForescast({ main, weather, wind }) {
-    // const [ data, setData ] = useState({ main: {}, weather: {}, wind: {} });
-    // const [ isLoading, setIsLoading ] = useState(false);
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //     setIsLoading(true);
-
-    //         const weatherData = await axios(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`);
-          
-    //         setData({
-    //             main: weatherData.data.main,
-    //             weather: weatherData.data.weather[0],
-    //             wind: weatherData.data.wind
-    //         });
-
-    //     setIsLoading(false);
-    //     };
-        
-    //     fetchData();
-        
-    //   }, [city]);
-
+function TodayForescast({ main, weather, wind, city }) {
     return (
     <React.Fragment>
 
@@ -32,7 +10,7 @@ function TodayForescast({ main, weather, wind }) {
         <div className="container">
             <div className="row">
                 <div className="today-weather col-md-4">
-                {(typeof data.weather.icon != "undefined") ? (
+                {(typeof weather.icon != "undefined") ? (
                     <img src={`http://openweathermap.org/img/wn/${weather.icon}@4x.png`}  alt="weather icon"  />
                 ) : ('')}
                     <div className="today-temp accent-color">{Math.round(main.temp) }°C </div>

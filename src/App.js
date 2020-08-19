@@ -8,7 +8,6 @@ import HourForecast from './components/hour/Forecast';
 import clockIcon from "./assets/image/clock-icon.png";
 
 function App() {
-
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   let myLocation =  (search === '') ? "las pinas" : search;
@@ -60,7 +59,7 @@ function App() {
             </form>
           </div>
 
-          <TodayForecast main={data.main} weather={data.weather} wind={data.wind} />
+          <TodayForecast main={data.main} weather={data.weather} wind={data.wind} city={myLocation} />
         
           <HourForecast city={myLocation} />
 
