@@ -99,10 +99,10 @@ input::placeholder {
   position: absolute;
   top: 0;
   right: 0;
-  height: 60px;
-  width: 60px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  height: 50px;
+  width: 50px;
+  background: rgba(0,0,0,.5);
+  padding: 10px;
   z-index: 2;
   transition: .25s ease-in-out;
 }
@@ -198,7 +198,7 @@ input::placeholder {
   padding: 0 15px;
 }
 .side-panel .df-list {
-  padding: 10px 0px;
+  padding: 0px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   justify-content: space-between;
   transition: .25s ease-out;
@@ -242,8 +242,16 @@ input::placeholder {
     margin: 20px 0 0;
     text-align: left;
   }
+
+  .search-box {
+    height: 60px;
+    width: 60px;
+    padding: 15px;
+  }
+
   .weather-info .wi-data {
     font-weight: bold;
+    color: #fccd02;
   }
 
   .bottom {
